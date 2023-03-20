@@ -1,7 +1,7 @@
 ﻿#******External Computers Only!!! DO NOT RUN ON DOMAIN COMPUTERS!!!!!******
 
 echo "This script is located on a flash drive."
-echo "Make sure the flash drive is set to H: before proceeding forward!"
+echo "Make sure the flash drive is set to F: before proceeding forward!"
 
 Read-Host -Prompt "Press any key to continue"
 
@@ -11,8 +11,6 @@ $password = ConvertTo-SecureString "Anyone" -AsPlainText -Force
 
 New-LocalUser "Anyone" -Password $Password -PasswordNeverExpires
 Add-LocalGroupMember -Name "Users" -Member "Anyone"
-
-#End External Computers Only
 
 #Set Timezone to Central Time
 
@@ -30,7 +28,7 @@ powercfg.exe -h off #Disables both hibernate and fast startup options.
 cd F:\ComputerSetup\Applications
 start cscript "MicrosoftUpdate.vbs"
 
-#WOL: AKA Robs WOL
+#WOL:
 
 cd F:\ComputerSetup\Applications
 .\Robs_WOL2.exe
