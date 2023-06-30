@@ -25,10 +25,6 @@ vssadmin resize shadowstorage /on=C: /for=C: /maxsize=5%
 
 powercfg.exe -h off #Disables both hibernate and fast startup options.
 
-#Turn On Microsoft Updates for Other Microsoft Products
-
-(New-Object -com "Microsoft.Update.ServiceManager").AddService2("7971f918-a847-4430-9279-4a52d1efe18d",7,"")
-
 #WOL:
 
 cd F:\Files\Scripts\ComputerSetup\Applications
